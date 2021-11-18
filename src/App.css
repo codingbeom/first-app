@@ -4,40 +4,6 @@ body {
     sans-serif;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.app {
-  width: 400px;
-  margin-top: 72px;
-}
-
-.question-section {
-  margin-bottom: 16px;
-}
-
-.question-header {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-.question-header__text {
-  font-size: 20px;
-  margin-bottom: 8px;
-}
-
-.quiz-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 8px;
-}
-
 .result-header {
   font-size: 64px;
   font-weight: bold;
