@@ -17,12 +17,12 @@ const QuestionTitle = styled.div`
   margin-bottom: 8px;
 `;
 
-const QuestionGroup = ({ currentNo }) => (
+const QuestionGroup = ({ currenNo }) => (
   <QuestionW>
     <PageLabel>
-      <span>{quiz[currentNo].id}</span>/{quiz.length}
+      <span>{quiz[currenNo].id}</span>/{quiz.length}
     </PageLabel>
-    <QuestionTitle>{quiz[currentNo].question}</QuestionTitle>
+    <QuestionTitle>{quiz[currenNo].question}</QuestionTitle>
   </QuestionW>
 );
 export default QuestionGroup;
