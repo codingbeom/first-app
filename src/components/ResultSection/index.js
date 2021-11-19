@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { quiz } from "../../contents";
 
 const ResultTitle = styled.h1`
   font-size: 64px;
@@ -15,11 +16,11 @@ const Score = styled.p`
   color: ${(props) => props.theme.primaryColor100};
 `;
 
-const ResultSection = ({ showScore, reSum }) => (
+const ResultSection = ({ score }) => (
   <>
     <ResultTitle>당신의 점수는?</ResultTitle>
     <Score>
-      {showScore}/{reSum}
+      {score}/{quiz.length}
     </Score>
   </>
 );

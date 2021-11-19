@@ -2,13 +2,12 @@ import { useState } from "react";
 import Container from "../../components/container";
 import AnswerGroup from "../../components/AnswerGroup";
 import QuestionGroup from "../../components/QuestionGroup";
-import ResultSection from "../../components/ResultSection";
 import { quiz } from "../../contents";
+import { useHistory } from "react-router";
 
-const Quiz = () => {
-  const [score, setScore] = useState(0);
-  const [showPage, setPage] = useState(false);
+const Quiz = ({ setScore }) => {
   const [currenNo, setCurrenNo] = useState(0);
+  let history = useHistory();
 
   const quizClick = (corret) => {
     if (corret) {
@@ -18,20 +17,17 @@ const Quiz = () => {
       alert("틀렸습니다.");
     }
     if (currenNo === quiz.length - 1) {
-      setPage(true);
+      history.push("/result");
+      //페이지 이동
     } else {
       setCurrenNo((currenNo) => currenNo + 1);
     }
   };
 
-  return showPage ? (
-    <Container>
-      <ResultSection showScore={score} reSum={quiz.length}></ResultSection>
-    </Container>
-  ) : (
+  return (
     <Container>
       <QuestionGroup currenNo={currenNo} />
-      <AnswerGroup currenNo={currenNo} handleClick={quizClick} />
+      <AnswerGroup currenNo={currenNo} quizClick={quizClick} />
     </Container>
   );
 };
