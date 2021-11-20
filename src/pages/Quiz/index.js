@@ -1,9 +1,8 @@
+import React from "react";
 import { useState } from "react";
-import Container from "../../components/container";
-import AnswerGroup from "../../components/AnswerGroup";
-import QuestionGroup from "../../components/QuestionGroup";
 import { quiz } from "../../contents";
 import { useHistory } from "react-router";
+import { Container, AnswerGroup, QuestionGroup } from "components";
 
 const Quiz = ({ setScore }) => {
   const [currenNo, setCurrenNo] = useState(0);

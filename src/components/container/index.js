@@ -8,6 +8,8 @@ const FlexBox = styled.div`
 `;
 
 const ContainerW = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 400px;
   margin-top: 72px;
 `;

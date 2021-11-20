@@ -1,5 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+
+const StyleLink = styled(Link)`
+  whidth: 100%;
+`;
 
 const StyleButton = styled.button`
   font-size: ${(tomato) => (tomato.Size === "big" ? "32px" : "16px")};
@@ -19,7 +24,12 @@ const StyleButton = styled.button`
     }
 }`;
 
-const Button = (toamto) => {
-  return <StyleButton onClick={toamto.onClick}>{toamto.text}</StyleButton>;
-};
+const Button = ({ to, onClick, children }) =>
+  to ? (
+    <StyleLink to={to}>
+      <StyleButton onClick={onClick}>{children}</StyleButton>
+    </StyleLink>
+  ) : (
+    <StyleButton onClick={onClick}>{children}</StyleButton>
+  );
 export default Button;

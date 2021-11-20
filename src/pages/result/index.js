@@ -1,15 +1,13 @@
-import Container from "../../components/container";
-import ResultSection from "../../components/ResultSection";
-import Button from "../../components/Button";
-import { Link } from "react-router-dom";
+import React from "react";
+import { Button, Container, ResultSection } from "components";
 
-const Result = ({ score }) => {
+const Result = ({ score, setScore }) => {
   return (
     <Container>
       <ResultSection score={score}></ResultSection>
-      <Link to="/">
-        <Button text="테스트 다시하기"></Button>
-      </Link>
+      <Button to="/" onClick={() => setScore(0)}>
+        테스트 다시하기
+      </Button>
     </Container>
   );
 };

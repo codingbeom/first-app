@@ -1,8 +1,7 @@
-import Container from "../../components/container";
+import React from "react";
 import styled from "styled-components";
-import cover from "../../assets/images/cover-bg.jpg";
-import Button from "../../components/Button";
-import { Link } from "react-router-dom";
+import cover from "assets/images/cover-bg.jpg";
+import { Button, Container } from "components";
 
 const Title = styled.h1`
   font-size: 30px;
@@ -44,9 +43,7 @@ const Landing = () => {
         스페이스 X, 뉴럴링크까지 많은 혁신 기업을 배출한 일론 머스크에 대해서
         얼마나 알고 계신가요?
       </Text>
-      <Link to="/quiz">
-        <Button text="일론 머스크 지수 알아보기"></Button>
-      </Link>
+      <Button to="/quiz">일론 머스크 지수 알아보기</Button>
     </Container>
   );
 };

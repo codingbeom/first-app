@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { quiz } from "../../contents";
+import { quiz } from "contents";
 
 const ResultTitle = styled.h1`
   font-size: 64px;

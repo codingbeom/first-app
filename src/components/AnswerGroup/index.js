@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { quiz } from "../../contents";
-import Button from "../Button";
+import { quiz } from "contents";
+import { Button } from "components";
 
 const AnswerGroupW = styled.div`
   display: flex;
@@ -14,10 +14,9 @@ const AnswerGroupW = styled.div`
 const AnswerGroup = ({ currenNo, quizClick }) => (
   <AnswerGroupW>
     {quiz[currenNo].answers.map((tomato) => (
-      <Button
-        text={tomato.text}
-        onClick={() => quizClick(tomato.corret)}
-      ></Button>
+      <Button key={tomato.text} onClick={() => quizClick(tomato.corret)}>
+        {tomato.text}
+      </Button>
     ))}
   </AnswerGroupW>
 );

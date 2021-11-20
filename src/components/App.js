@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import theme from "../theme/theme";
+import theme from "theme/theme";
 import { ThemeProvider } from "styled-components";
-import GlobalStyle from "../globalStyle";
-import Quiz from "../pages/Quiz";
-import Landing from "../pages/landing";
+import GlobalStyle from "globalStyle";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Result from "../pages/result";
+import { Quiz, Landing, Result, Loading } from "pages";
 
 function App() {
   const [score, setScore] = useState(0);
@@ -14,8 +12,11 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Router>
+        <Route path="/loading">
+          <Loading />
+        </Route>
         <Route path="/result">
-          <Result score={score} />
+          <Result score={score} setScore={setScore} />
         </Route>
         <Route path="/quiz">
           <Quiz setScore={setScore} />
