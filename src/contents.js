@@ -29,6 +29,26 @@ const quiz = [
       { text: "Everything Co.", corret: false },
     ],
   },
+  {
+    id: 4,
+    question: "일론 머스크가 테슬라 투자하고, 최대 주주로 등극한 시기는?",
+    answers: [
+      { text: "2001년", corret: false },
+      { text: "2002년", corret: false },
+      { text: "2003년", corret: false },
+      { text: "2004년", corret: true },
+    ],
+  },
+  {
+    id: 5,
+    question: "테슬라 내에서 일론 머스크의 직함은?",
+    answers: [
+      { text: "Master of coin", corret: false },
+      { text: "Chairman", corret: false },
+      { text: "CEO", corret: false },
+      { text: "Technoking", corret: true },
+    ],
+  },
 ];
 
 export { quiz };

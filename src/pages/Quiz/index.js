@@ -15,8 +15,9 @@ const Quiz = ({ setScore }) => {
     } else {
       alert("틀렸습니다.");
     }
+
     if (currenNo === quiz.length - 1) {
-      history.push("/result");
+      history.push("/loading");
       //페이지 이동
     } else {
       setCurrenNo((currenNo) => currenNo + 1);

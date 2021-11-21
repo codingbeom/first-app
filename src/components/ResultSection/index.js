@@ -1,27 +1,26 @@
 import React from "react";
 import styled from "styled-components";
-import { quiz } from "contents";
+import { SocialButtonGroup } from "components";
 
 const ResultTitle = styled.h1`
-  font-size: 64px;
+  font-size: 54px;
   font-weight: bold;
-  margin-bottom: 8px;
+  margin: 8px 0px;
   text-align: center;
 `;
 
 const Score = styled.p`
-  font-size: 192px;
+  font-size: 120px;
   margin: 40px;
   text-align: center;
   color: ${(props) => props.theme.primaryColor100};
 `;
 
-const ResultSection = ({ score }) => (
+const ResultSection = ({ conScore }) => (
   <>
     <ResultTitle>당신의 점수는?</ResultTitle>
-    <Score>
-      {score}/{quiz.length}
-    </Score>
+    <Score>{conScore} 점</Score>
+    <SocialButtonGroup></SocialButtonGroup>
   </>
 );
 export default ResultSection;

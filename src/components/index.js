@@ -5,3 +5,4 @@ export { default as Container } from "components/container";
 export { default as QuestionGroup } from "components/QuestionGroup";
 export { default as ResultSection } from "components/ResultSection";
 export { default as Spinner } from "components/spinner";
+export { default as SocialButtonGroup } from "components/SocialButton";
